@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <nav>
+        <header>
+            <h1>ON</h1>
+        </header>
+        <div class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <input type="text" name="search" placeholder="Search">
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <p>
+            <h4>My name is...</h4>
+            <h2>Okonkwo Nelson Chima</h2>
+            <h1>I'm a Frontend Web Developer.</h1>
+            I'm a frontend web developer. I deal with creating<br>
+            your dream modern, user-friendly website. See my latest projects<br>
+            below!
+        </p>
+        <button><a href="#work">View Work</a></button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1>About Me</h1>
+        <h2>
+            Hi, I'm Nelson, nice to meet you! Please take a look around to learn more about me and my work.
+        </h2>
+        <p>
+            I am Okonkwo Nelson Chima, a passionate frontend web developer with a keen eye for design and a love for creating intuitive user experiences. 
+            With a background in computer science, I have honed my skills in HTML, CSS, and JavaScript, and I am always eager to learn new technologies.
+            In my free time, I enjoy working on personal projects and exploring new web development trends.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-header">
+            <h1>My Skills</h1>
+            <h2>I have a good knowledge of the following skills</h2>
+            <p>
+                As a frontend web developer, I have a diverse skill set that allows me to create engaging and responsive web applications. 
+                My expertise includes HTML, CSS, JavaScript, React, Git, and responsive design principles. 
+                I am committed to writing clean, maintainable code and continuously improving my skills to stay current with industry trends.
+            </p>
+        </div>
+        <div class="skill">
+            <div class="skill-item">
+                <img src="html-icon.png" alt="HTML Icon">
+                <h3>HTML</h3>
+                <p>Proficient in creating semantic and accessible HTML markup.</p>
+            </div>
+            <div class="skill-item">
+                <img src="css-icon.png" alt="CSS Icon">
+                <h3>CSS</h3>
+                <p>Experienced in styling websites with modern CSS techniques, including Flexbox and Grid.</p>
+            </div>
+            <div class="skill-item">
+                <img src="js-icon.png" alt="JavaScript Icon">
+                <h3>JavaScript</h3>
+                <p>Skilled in writing clean and efficient JavaScript code for dynamic web applications.</p>
+            </div>
+            <div class="skill-item">
+                <img src="react-icon.png" alt="React Icon">
+                <h3>React</h3>
+                <p>Familiar with building interactive user interfaces using React.js.</p>
+            </div>
+            <div class="skill-item">
+                <img src="git-icon.png" alt="Git Icon">
+                <h3>Git</h3>
+                <p>Experienced in version control using Git for collaborative development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <h1>My Work</h1>
+        <h2>Here are some of my recent projects</h2>
+        <p>
+            I have worked on a variety of projects that showcase my skills in frontend development. 
+            From personal websites to collaborative applications, each project reflects my commitment to quality and user experience.
+        </p>
+        <div class="project">
+            <div class="project-item">
+                <a href="https://efinanceinvestment.com" target="_blank"><img src="inv.jpg" alt="Project 1"></a>
+                <h3>Investment Website</h3>
+                <p>A responsive website built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-item">
+                <a href="https://autumnfinancial.com.au/" target="_blank"><img src="e-commerce.png" alt="Project 2"></a>
+                <h3>E-commerce Website</h3>
+                <p>A website for buying and selling financial products.</p>
+            </div>
+            <div class="project-item">
+                <a href="https://trexfort.com" target="_blank"><img src="crypto.jpg" alt="Project 3"></a>
+                <h3>Crypto Investment Platform</h3>
+                <p>A website for cryptocurrency investments and trading.</p>
+            </div>
+            <div class="project-item">
+                <a href="https://elixedge.com" target="_blank"><img src="inv.jpg" alt="Project 4"></a>
+                <h3>Investment Platform</h3>
+                <p>A platform for managing and growing investments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <h2>I would love to hear from you!</h2>
+        <p>
+            Submit your form below or send me an email at <a href="mailto:okonkwonelson752@gmail.com">okonkwonelson752@gmail.com</a>
+        </p>
+        <div class="form">
+            <form action="mailto:okonkwonelson752@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required><br><br>
+                <input type="email" name="email" placeholder="Your Email" required><br><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+                <button type="submit">Let's Work Together!</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Okonkwo Nelson Chima. All rights reserved.</p>
+        </footer>
+    <script src="portfolio.js"></script>
+</body>
+</html>

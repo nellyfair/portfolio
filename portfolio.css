@@ -1,0 +1,392 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background: purple;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 20vh;
+}
+
+nav header h1 {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    left: -45%;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav ul li {
+    margin: 0 1.5rem;
+}
+
+.nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav ul a:hover {
+    color: #00f;
+}
+
+nav input {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    left: 35%;
+    bottom: 100px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+}
+
+/* Nav Toggle */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 2rem;
+}
+
+.home h1, .home h2, .home h4 {
+    margin-bottom: 0.5rem;
+}
+
+.home h4 {
+    font-size: 1.2rem;
+    color: purple;
+}
+
+.home h2 {
+    font-size: 1.5rem;
+    color: rgb(236, 171, 238);
+}
+
+.home button {
+    padding: 0.8rem 1.5rem;
+    color: purple;
+    border: 1px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    outline: none;
+    background: transparent;
+}
+
+.home a {
+    text-decoration: none;
+    color: purple;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.home button:hover {
+    background: purple;
+}
+
+.home button:hover a {
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+.about h1 {
+    margin-bottom: 1rem;
+    text-decoration: underline purple;
+    color: purple;
+    text-transform: capitalize;
+}
+
+.about h2 {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.skills-header h1 {
+    margin-bottom: 1rem;
+    color: purple;
+    text-decoration: underline purple;
+    text-transform: capitalize;
+}
+
+.skills-header h2 {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.skill-item {
+    background: purple;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Work Section */
+.work {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.work h1 {
+    margin-bottom: 1rem;
+    color: purple;
+    text-decoration: underline purple;
+    text-transform: capitalize;
+}
+
+.work h2 {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.contact h1 {
+    margin-bottom: 1rem;
+    color: purple;
+    text-decoration: underline purple;          
+    text-transform: capitalize;
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form textarea {
+    height: 150px;
+}
+
+.form button {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: purple;
+    border: 1px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: capitalize;
+}
+
+.form button:hover {
+    background: purple;
+    color: #fff;
+}
+.nav {
+    position: relative;
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    background: purple;
+    color: #fff;
+    font-size: 0.9rem; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        background: purple;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav input {
+        left: 0;
+        bottom: 0;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    nav header h1 {
+        left: 0;
+        font-size: 1.5rem;
+    }
+
+    .home {
+        padding: 1rem;
+    }
+
+    .skill, .project {
+        grid-template-columns: 1fr;
+    }
+}
